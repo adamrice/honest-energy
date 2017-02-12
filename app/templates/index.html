@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block description %}
+A resource to switch to clean energy.
+{% endblock %}
+
+{% block content %}
+    <!-- Header -->
+      <header id="header">
+        <h1>Honest Energy</h1>
+        <p>
+          The average american household releases <strong>13,000 pounds
+          of CO<sub>2</sub></strong> into the atmosphere each year.
+          That’s enough CO<sub>2</sub> to fill over 120 school buses.</p>
+        <p>
+          You can turn 13,000 pounds to zero by switching to clean energy.
+          And you can do it today. Switching is easy, and we can help guide
+          you through that process. All it takes is a few clicks.
+        </p>
+        <p>
+          Enter your email below to get started.
+        </p>
+      </header>
+
+    <!-- Signup Form -->
+      <form id="signup-form" method="post" action="">
+        {{ form.hidden_tag() }}
+        {{ form.email(
+            type="email",
+            id="email",
+            placeholder="Email Address"
+          ) }}
+        <input type="submit" value="Sign Up" />
+        {% for error in form.email.errors %}
+          <span class="form-error">* {{ error }}</span>
+        {% endfor %}
+      </form>
+{% endblock %}

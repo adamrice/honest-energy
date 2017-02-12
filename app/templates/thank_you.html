@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Header -->
+      <header id="header">
+        <h1>Thank You!</h1>
+        <p>You're one step closer to a cleaner future.</p>
+      </header>
+
+    <!-- Share Icons -->
+      <div>
+          <ul class="icons" id="share-icon">
+              <li class="share-icons">
+                  <h2>Help spread the word!</h2>
+              </li>
+              <li class="share-icons">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.url | urlencode }}" class="icon fa-facebook" target="_blank">
+                      <span class="label">Facebook</span>
+                  </a>
+              </li class="share-icons">
+              <li>
+                  <a href="http://twitter.com/share?text=The average american household releases 13,000 pounds of CO2 into the atmosphere each year.&url={{ request.url }}&hashtags=renewables,cleanenergy" class="icon fa-twitter" target="_blank">
+                      <span class="label">Twitter</span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+
+{% endblock %}

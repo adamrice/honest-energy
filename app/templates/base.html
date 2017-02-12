@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="{% block description %}{% endblock %}">
+
+    {% if title %}
+      <title> {{ title }} | Honest Energy</title>
+    {% else %}
+      <title>Honest Energy</title>
+    {% endif %}
+
+    <link rel="shortcut icon" href="{{ url_for('.static', filename='favicon.ico') }}">
+    <!--[if lte IE 8]><script src="{{ url_for('.static', filename='js/ie/html5shiv.js') }}"></script><![endif]-->
+    <link rel="stylesheet" href="{{ url_for('.static', filename='css/main.css') }}" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{ url_for('.static', filename='css/ie8.css') }}" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{ url_for('.static', filename='css/ie9.css') }}" /><![endif]-->
+    <script src="{{ url_for('.static', filename='js/modernizr-2.8.3.min.js') }}"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li><a href="https://twitter.com/honestenergyco" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+          <li><a href="mailto:team@honest.energy" class="icon fa-envelope-o" target="_blank"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Honest Energy</li>
+        </ul>
+      </footer>
+
+    <!-- Scripts -->
+      <!--[if lte IE 8]><script src="{{ url_for('.static', filename='js/ie/respond.min.js') }}"></script><![endif]-->
+      <script src="{{ url_for('.static', filename='js/main.js') }}"></script>
+      <!-- Google Analytics -->
+      <script>
+          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+          e.src='https://www.google-analytics.com/analytics.js';
+          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+          ga('create','{{ google_analytics_id }}','auto');ga('send','pageview');
+      </script>
+  </body>
+</html>
