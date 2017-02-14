@@ -51,7 +51,7 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   width: 100%; }
-  @media screen and (max-height: 640px) {
+  @media screen and (max-height: 960px) {
     html, body {
       height: auto;
       min-height: 100%; } }
@@ -822,7 +822,7 @@ button,
     #footer {
       bottom: 1.25em;
       left: 1.25em; } }
-  @media screen and (max-height: 640px) {
+  @media screen and (max-height: 960px) {
     #footer {
       bottom: auto;
       left: auto;

@@ -12,7 +12,7 @@
     small: '(max-width: 736px)',
     xsmall: '(max-width: 480px)',
     xxsmall: '(max-width: 360px)',
-    short: '(max-height: 640px)'
+    short: '(max-height: 960px)'
   ));
 
   @include skel-layout((
